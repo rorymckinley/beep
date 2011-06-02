@@ -7,8 +7,26 @@ Currently, beep is a very simple wrapper around the beep utility of Linux. It ha
 Install beep (the utility) using your package management  app of choice. If you type in `beep` at the command prompt, you should be rewarded with, well, pretty much just a beep.
 Note: In some recent Ubuntu versions, the pcspkr module is blacklisted, so you will need to comment out the relevant line in /etc/modprobe.d/blacklistif you want the pcspkr permanently enabled (it can be quite annoying) or manually load it using `sudo modprobe pcspkr`
 
-== Usage
+And then, install the gem.
 
   gem install beep
 
+== Usage
+
+In your Ruby code:
+
   require 'beep'
+
+=== Issuing the default beep
+
+  Beep::Sound.generate 
+
+=== Passing through a sequence of beeps
+
+  sounds = [
+    {:frequency => 100, :duration => 200, :pause => 300},
+    {:frequency => 400, :duration => 500, :pause => 600},
+    {:frequency => 700, :duration => 800, :pause => 900},
+  ]
+
+The duration and pause sounds are in milliseconds. Frequency is in MHz.
