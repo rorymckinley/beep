@@ -1,0 +1,14 @@
+= beep
+
+Currently, beep is a very simple wrapper around the beep utility of Linux. It handles a small subset of the functionality provided by the utility.
+
+== Installing beep
+
+Install beep (the utility) using your package management  app of choice. If you type in `beep` at the command prompt, you should be rewarded with, well, pretty much just a beep.
+Note: In some recent Ubuntu versions, the pcspkr module is blacklisted, so you will need to comment out the relevant line in /etc/modprobe.d/blacklistif you want the pcspkr permanently enabled (it can be quite annoying) or manually load it using `sudo modprobe pcspkr`
+
+== Usage
+
+  gem install beep
+
+  require 'beep'
