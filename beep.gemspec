@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Beep::VERSION
   s.authors     = ["Rory McKinley"]
   s.email       = ["rorymckinley@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/rorymckinley/beep"
   s.summary     = %q{A small gem to manipulate the linux beep utility}
   s.description = %q{This gem provides a very simple wrapper around the Linux beep utility}
 
