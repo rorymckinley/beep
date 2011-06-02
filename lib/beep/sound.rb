@@ -8,12 +8,17 @@ module Beep
     private
 
     def self.create_arguments(instructions)
+      instructions_to_args = {
+        :frequency => ' -f %s', 
+        :duration => ' -l %s',
+        :pause => ' -D %s'
+      }
       (instructions.map do |instruction|
-        instruction_as_args = ''
-        instruction_as_args += ' -f %s' % instruction[:frequency] if instruction[:frequency]
-        instruction_as_args += ' -l %s' % instruction[:duration] if instruction[:duration]
-        instruction_as_args += ' -D %s' % instruction[:pause] if instruction[:pause]
-        instruction_as_args
+        arguments = ''
+        instruction.each do |name,value|
+          arguments += instructions_to_args[name] % value
+        end
+        arguments
       end).join(" -n")
     end
   end
