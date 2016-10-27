@@ -45,4 +45,4 @@ The duration and pause sounds are in milliseconds. Frequency is in MHz.
 
 == Copyright
 
-Copyright(c)2016 Rory McKinley. See LICENSE for details.
+Copyright (c)2016 Rory McKinley. See LICENSE for details.
